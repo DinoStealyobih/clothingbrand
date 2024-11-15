@@ -1,0 +1,71 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #000, #222);
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Welcome Container */
+.welcome-container {
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+/* 3D Logo */
+.logo-wrapper {
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    animation: spin 3s infinite linear;
+}
+
+/* Welcome Message */
+.welcome-message {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f39c12;
+    animation: pulse 2s infinite;
+}
+
+/* Keyframes */
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
